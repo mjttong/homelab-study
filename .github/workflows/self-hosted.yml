@@ -1,0 +1,16 @@
+name: self-hosted runner
+
+on:
+  workflow_dispatch:
+
+jobs:
+  self-hosted:
+    runs-on: self-hosted
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: print main readme.md
+      run: |
+        echo "--------- print main readme.md ---------"
+        cat README.md
